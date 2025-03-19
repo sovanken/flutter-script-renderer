@@ -5,15 +5,15 @@ import '../core/enums/script_type.dart';
 class FontRegistry {
   /// Private constructor to prevent instantiation
   FontRegistry._();
-  
+
   // Khmer fonts
-  static const String khmerBattambang = 'Battambang'; 
+  static const String khmerBattambang = 'Battambang';
   static const String khmerKoulen = 'Koulen';
   static const String khmerMoul = 'Moul';
   static const String khmerNotoSerifKhmer = 'NotoSerifKhmer';
   static const String khmerSiemreap = 'Siemreap';
   static const String khmerSuwannaphum = 'Suwannaphum';
-  
+
   // Latin fonts
   static const String latinIBMPlexSans = 'IBMPlexSans';
   static const String latinInter = 'Inter';
@@ -25,11 +25,11 @@ class FontRegistry {
   static const String latinRaleway = 'Raleway';
   static const String latinRoboto = 'Roboto';
   static const String latinSFNSDisplay = 'SFNSDisplay';
-  
+
   // Default fonts for each script type
   static const String _defaultKhmerFont = khmerSiemreap;
   static const String _defaultLatinFont = latinRoboto;
-  
+
   /// Get the default font family for a given script type
   static String getDefaultFontFamily(ScriptType type) {
     switch (type) {
@@ -41,7 +41,7 @@ class FontRegistry {
         return _defaultLatinFont;
     }
   }
-  
+
   /// Get recommended font fallbacks for a given script type
   static List<String> getFontFallbacks(ScriptType type) {
     switch (type) {
@@ -53,7 +53,7 @@ class FontRegistry {
         return [latinRoboto, latinOpenSans, khmerSiemreap];
     }
   }
-  
+
   // Font weight helper constants
   static const FontWeight thin = FontWeight.w100;
   static const FontWeight extraLight = FontWeight.w200;

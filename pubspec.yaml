@@ -19,96 +19,98 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter:
+  assets:
+      - lib/assets/fonts/
   fonts:
     # Khmer Fonts
     - family: Battambang
       fonts:
-        - asset: assets/fonts/km/Battambang-Black.ttf
-        - asset: assets/fonts/km/Battambang-Bold.ttf
-        - asset: assets/fonts/km/Battambang-Light.ttf
-        - asset: assets/fonts/km/Battambang-Regular.ttf
-        - asset: assets/fonts/km/Battambang-Thin.ttf
+        - asset: lib/assets/fonts/km/Battambang-Black.ttf
+        - asset: lib/assets/fonts/km/Battambang-Bold.ttf
+        - asset: lib/assets/fonts/km/Battambang-Light.ttf
+        - asset: lib/assets/fonts/km/Battambang-Regular.ttf
+        - asset: lib/assets/fonts/km/Battambang-Thin.ttf
 
     - family: Koulen
       fonts:
-        - asset: assets/fonts/km/Koulen-Regular.ttf
+        - asset: lib/assets/fonts/km/Koulen-Regular.ttf
 
     - family: Moul
       fonts:
-        - asset: assets/fonts/km/Moul-Regular.ttf
+        - asset: lib/assets/fonts/km/Moul-Regular.ttf
 
     - family: NotoSerifKhmer
       fonts:
-        - asset: assets/fonts/km/NotoSerifKhmer-Black.ttf
-        - asset: assets/fonts/km/NotoSerifKhmer-Bold.ttf
-        - asset: assets/fonts/km/NotoSerifKhmer-ExtraBold.ttf
-        - asset: assets/fonts/km/NotoSerifKhmer-ExtraLight.ttf
-        - asset: assets/fonts/km/NotoSerifKhmer-Light.ttf
-        - asset: assets/fonts/km/NotoSerifKhmer-Medium.ttf
-        - asset: assets/fonts/km/NotoSerifKhmer-Regular.ttf
-        - asset: assets/fonts/km/NotoSerifKhmer-SemiBold.ttf
-        - asset: assets/fonts/km/NotoSerifKhmer-Thin.ttf
+        - asset: lib/assets/fonts/km/NotoSerifKhmer-Black.ttf
+        - asset: lib/assets/fonts/km/NotoSerifKhmer-Bold.ttf
+        - asset: lib/assets/fonts/km/NotoSerifKhmer-ExtraBold.ttf
+        - asset: lib/assets/fonts/km/NotoSerifKhmer-ExtraLight.ttf
+        - asset: lib/assets/fonts/km/NotoSerifKhmer-Light.ttf
+        - asset: lib/assets/fonts/km/NotoSerifKhmer-Medium.ttf
+        - asset: lib/assets/fonts/km/NotoSerifKhmer-Regular.ttf
+        - asset: lib/assets/fonts/km/NotoSerifKhmer-SemiBold.ttf
+        - asset: lib/assets/fonts/km/NotoSerifKhmer-Thin.ttf
 
     - family: Siemreap
       fonts:
-        - asset: assets/fonts/km/Siemreap-Regular.ttf
+        - asset: lib/assets/fonts/km/Siemreap-Regular.ttf
 
     - family: Suwannaphum
       fonts:
-        - asset: assets/fonts/km/Suwannaphum-Black.ttf
-        - asset: assets/fonts/km/Suwannaphum-Bold.ttf
-        - asset: assets/fonts/km/Suwannaphum-Light.ttf
-        - asset: assets/fonts/km/Suwannaphum-Regular.ttf
-        - asset: assets/fonts/km/Suwannaphum-Thin.ttf
+        - asset: lib/assets/fonts/km/Suwannaphum-Black.ttf
+        - asset: lib/assets/fonts/km/Suwannaphum-Bold.ttf
+        - asset: lib/assets/fonts/km/Suwannaphum-Light.ttf
+        - asset: lib/assets/fonts/km/Suwannaphum-Regular.ttf
+        - asset: lib/assets/fonts/km/Suwannaphum-Thin.ttf
 
     # English Fonts
     - family: IBMPlexSans
       fonts:
-        - asset: assets/fonts/en/IBMPlexSans.ttf
+        - asset: lib/assets/fonts/en/IBMPlexSans.ttf
 
     - family: Inter
       fonts:
-        - asset: assets/fonts/en/Inter.ttf
+        - asset: lib/assets/fonts/en/Inter.ttf
 
     - family: Lato
       fonts:
-        - asset: assets/fonts/en/Lato-Bold.ttf
-        - asset: assets/fonts/en/Lato-BoldItalic.ttf
-        - asset: assets/fonts/en/Lato-Light.ttf
-        - asset: assets/fonts/en/Lato-Regular.ttf
-        - asset: assets/fonts/en/Lato-Thin.ttf
+        - asset: lib/assets/fonts/en/Lato-Bold.ttf
+        - asset: lib/assets/fonts/en/Lato-BoldItalic.ttf
+        - asset: lib/assets/fonts/en/Lato-Light.ttf
+        - asset: lib/assets/fonts/en/Lato-Regular.ttf
+        - asset: lib/assets/fonts/en/Lato-Thin.ttf
 
     - family: Montserrat
       fonts:
-        - asset: assets/fonts/en/Montserrat.ttf
+        - asset: lib/assets/fonts/en/Montserrat.ttf
 
     - family: Nunito
       fonts:
-        - asset: assets/fonts/en/Nunito.ttf
+        - asset: lib/assets/fonts/en/Nunito.ttf
 
     - family: OpenSans
       fonts:
-        - asset: assets/fonts/en/OpenSans.ttf
+        - asset: lib/assets/fonts/en/OpenSans.ttf
 
     - family: Poppins
       fonts:
-        - asset: assets/fonts/en/Poppins-Light.ttf
-        - asset: assets/fonts/en/Poppins-Medium.ttf
-        - asset: assets/fonts/en/Poppins-Regular.ttf
-        - asset: assets/fonts/en/Poppins-Thin.ttf
+        - asset: lib/assets/fonts/en/Poppins-Light.ttf
+        - asset: lib/assets/fonts/en/Poppins-Medium.ttf
+        - asset: lib/assets/fonts/en/Poppins-Regular.ttf
+        - asset: lib/assets/fonts/en/Poppins-Thin.ttf
 
     - family: Raleway
       fonts:
-        - asset: assets/fonts/en/Raleway.ttf
+        - asset: lib/assets/fonts/en/Raleway.ttf
 
     - family: Roboto
       fonts:
-        - asset: assets/fonts/en/Roboto.ttf
+        - asset: lib/assets/fonts/en/Roboto.ttf
 
     - family: SFNSDisplay
       fonts:
-        - asset: assets/fonts/en/SFNSDisplay-Light.otf
-        - asset: assets/fonts/en/SFNSDisplay-Medium.otf
-        - asset: assets/fonts/en/SFNSDisplay-Regular.otf
-        - asset: assets/fonts/en/SFNSDisplay-Semibold.otf
-        - asset: assets/fonts/en/SFNSDisplay-Thin.otf
+        - asset: lib/assets/fonts/en/SFNSDisplay-Light.otf
+        - asset: lib/assets/fonts/en/SFNSDisplay-Medium.otf
+        - asset: lib/assets/fonts/en/SFNSDisplay-Regular.otf
+        - asset: lib/assets/fonts/en/SFNSDisplay-Semibold.otf
+        - asset: lib/assets/fonts/en/SFNSDisplay-Thin.otf
