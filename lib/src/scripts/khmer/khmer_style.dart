@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../flutter_script_renderer.dart';
+import '../../core/enums/script_type.dart';
+import '../../core/models/text_style_properties.dart';
+import '../../fonts/font_registry.dart';
 
 /// Handler for Khmer script styling
 class KhmerStyle {
@@ -19,6 +21,7 @@ class KhmerStyle {
       return baseStyle.copyWith(
         fontFamily: FontRegistry.getDefaultFontFamily(ScriptType.khmer),
         fontFamilyFallback: FontRegistry.getFontFallbacks(ScriptType.khmer),
+        package: 'flutter_script_renderer',
       );
     }
 
@@ -57,6 +60,7 @@ class KhmerStyle {
           FontRegistry.getFontFallbacks(ScriptType.khmer),
       debugLabel: khmerProperties.debugLabel ?? baseProperties.debugLabel,
       inherit: khmerProperties.inherit ?? baseProperties.inherit ?? true,
+      package: 'flutter_script_renderer',
     );
   }
 }
