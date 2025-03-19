@@ -1,6 +1,6 @@
 name: flutter_script_renderer
 description: A Flutter package for automatic rendering of multilingual text with proper script-specific styling, supporting Khmer and Latin scripts with extensibility for additional languages.
-version: 0.1.0
+version: 0.1.1
 repository: https://github.com/sovanken/flutter-script-renderer
 homepage: https://github.com/sovanken/flutter-script-renderer
 issue_tracker: https://github.com/sovanken/flutter-script-renderer/issues
