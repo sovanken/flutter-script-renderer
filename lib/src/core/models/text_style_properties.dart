@@ -191,8 +191,9 @@ class TextStyleProperties {
 /// By separating script-specific properties into a specialized class, the package
 /// can maintain clean boundaries between general styling and script-specific styling.
 ///
-/// This class is typically used to define styles for specific scripts like Khmer or Latin,
-/// where each script may require different typography settings for optimal rendering.
+/// This class is typically used to define styles for specific scripts like Khmer, Thai,
+/// Lao, Myanmar, Vietnamese, or Latin, where each script may require different typography
+/// settings for optimal rendering.
 class ScriptStyleProperties extends TextStyleProperties {
   /// The font family to use for the specific script.
   ///
@@ -200,8 +201,13 @@ class ScriptStyleProperties extends TextStyleProperties {
   /// require different font families designed to handle their unique characters
   /// and typographic requirements.
   ///
-  /// For example, Khmer text requires fonts specifically designed for Khmer script,
-  /// while Latin text can use standard Latin fonts.
+  /// For example:
+  /// - Khmer text requires fonts specifically designed for Khmer script
+  /// - Thai text needs fonts that properly render tone marks and vowel positioning
+  /// - Lao text requires fonts with proper glyph support for Lao characters
+  /// - Myanmar text needs fonts that handle complex stacking and medial consonants
+  /// - Vietnamese text benefits from fonts with proper diacritic support
+  /// - Latin text can use standard Latin fonts
   final String? fontFamily;
 
   /// Creates script-specific style properties with an optional font family.
@@ -212,10 +218,10 @@ class ScriptStyleProperties extends TextStyleProperties {
   ///
   /// Example:
   /// ```dart
-  /// final khmerProperties = ScriptStyleProperties(
+  /// final thaiProperties = ScriptStyleProperties(
   ///   fontSize: 18.0,
   ///   color: Colors.black,
-  ///   fontFamily: 'Battambang',
+  ///   fontFamily: 'Sarabun',
   /// );
   /// ```
   const ScriptStyleProperties({

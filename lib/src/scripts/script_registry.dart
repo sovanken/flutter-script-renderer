@@ -3,12 +3,17 @@ import '../core/enums/script_type.dart';
 import '../core/models/text_style_properties.dart';
 import 'khmer/khmer_style.dart';
 import 'latin/latin_style.dart';
+import 'thai/thai_style.dart';
+import 'lao/lao_style.dart';
+import 'myanmar/myanmar_style.dart';
+import 'vietnamese/vietnamese_style.dart';
 
 /// Registry for script handlers that centralizes text style generation for different scripts.
 ///
 /// This class serves as a coordination point and factory for creating properly styled
 /// [TextStyle] objects based on script type. It delegates style generation to specialized
-/// script handlers (e.g., [KhmerStyle], [LatinStyle]) while providing a unified interface.
+/// script handlers (e.g., [KhmerStyle], [LatinStyle], [ThaiStyle], [LaoStyle],
+/// [MyanmarStyle], [VietnameseStyle]) while providing a unified interface.
 ///
 /// The registry pattern used here allows for:
 /// - Central management of all supported scripts
@@ -39,10 +44,10 @@ class ScriptRegistry {
   ///
   /// Example usage:
   /// ```dart
-  /// TextStyle khmerStyle = ScriptRegistry.createTextStyle(
-  ///   type: ScriptType.khmer,
+  /// TextStyle thaiStyle = ScriptRegistry.createTextStyle(
+  ///   type: ScriptType.thai,
   ///   baseProperties: baseProps,
-  ///   khmerProperties: khmerProps,
+  ///   thaiProperties: thaiProps,
   /// );
   /// ```
   ///
@@ -51,6 +56,10 @@ class ScriptRegistry {
   /// - [baseProperties]: Base text style properties that apply to all scripts
   /// - [khmerProperties]: Optional Khmer-specific style properties that override base properties
   /// - [latinProperties]: Optional Latin-specific style properties that override base properties
+  /// - [thaiProperties]: Optional Thai-specific style properties that override base properties
+  /// - [laoProperties]: Optional Lao-specific style properties that override base properties
+  /// - [myanmarProperties]: Optional Myanmar-specific style properties that override base properties
+  /// - [vietnameseProperties]: Optional Vietnamese-specific style properties that override base properties
   ///
   /// Returns a TextStyle configured appropriately for the specified script type.
   static TextStyle createTextStyle({
@@ -69,6 +78,22 @@ class ScriptRegistry {
     /// Optional Latin-specific style properties.
     /// These override corresponding base properties when the script type is Latin.
     ScriptStyleProperties? latinProperties,
+    
+    /// Optional Thai-specific style properties.
+    /// These override corresponding base properties when the script type is Thai.
+    ScriptStyleProperties? thaiProperties,
+    
+    /// Optional Lao-specific style properties.
+    /// These override corresponding base properties when the script type is Lao.
+    ScriptStyleProperties? laoProperties,
+    
+    /// Optional Myanmar-specific style properties.
+    /// These override corresponding base properties when the script type is Myanmar.
+    ScriptStyleProperties? myanmarProperties,
+    
+    /// Optional Vietnamese-specific style properties.
+    /// These override corresponding base properties when the script type is Vietnamese.
+    ScriptStyleProperties? vietnameseProperties,
   }) {
     switch (type) {
       case ScriptType.khmer:
@@ -82,6 +107,30 @@ class ScriptRegistry {
         return LatinStyle.createTextStyle(
           baseProperties: baseProperties,
           latinProperties: latinProperties,
+        );
+      case ScriptType.thai:
+        // Delegate to the Thai style handler for Thai script
+        return ThaiStyle.createTextStyle(
+          baseProperties: baseProperties,
+          thaiProperties: thaiProperties,
+        );
+      case ScriptType.lao:
+        // Delegate to the Lao style handler for Lao script
+        return LaoStyle.createTextStyle(
+          baseProperties: baseProperties,
+          laoProperties: laoProperties,
+        );
+      case ScriptType.myanmar:
+        // Delegate to the Myanmar style handler for Myanmar script
+        return MyanmarStyle.createTextStyle(
+          baseProperties: baseProperties,
+          myanmarProperties: myanmarProperties,
+        );
+      case ScriptType.vietnamese:
+        // Delegate to the Vietnamese style handler for Vietnamese script
+        return VietnameseStyle.createTextStyle(
+          baseProperties: baseProperties,
+          vietnameseProperties: vietnameseProperties,
         );
       case ScriptType.neutral:
         // Neutral text (punctuation, spaces, etc.) inherits from Latin by default

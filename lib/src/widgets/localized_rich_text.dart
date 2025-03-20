@@ -8,8 +8,9 @@ import '../styles/localized_text_style.dart';
 /// different text styles to different scripts within a single string.
 ///
 /// This widget is designed for multilingual applications where text may contain
-/// mixed scripts (currently supporting Khmer and Latin) and each script requires
-/// specific typography settings for optimal readability and appearance.
+/// mixed scripts (supporting Khmer, Thai, Lao, Myanmar, Vietnamese, and Latin)
+/// and each script requires specific typography settings for optimal readability
+/// and appearance.
 ///
 /// The widget automatically:
 /// - Detects different script segments within the provided text
@@ -19,12 +20,14 @@ import '../styles/localized_text_style.dart';
 /// Example usage:
 /// ```dart
 /// LocalizedRichText(
-///   text: 'English text និងអក្សរខ្មែរ mixed together',
+///   text: 'English text និងអក្សរខ្មែរ และข้อความไทย mixed together',
 ///   fontSize: 16,
 ///   color: Colors.black,
 ///   khmerColor: Colors.blue,
+///   thaiColor: Colors.green,
 ///   latinFontFamily: 'Roboto',
 ///   khmerFontFamily: 'Battambang',
+///   thaiFontFamily: 'Sarabun',
 /// )
 /// ```
 ///
@@ -172,6 +175,278 @@ class LocalizedRichText extends StatelessWidget {
   /// Font family specifically for Khmer script segments. This is particularly important
   /// for proper rendering of Khmer text.
   final String? khmerFontFamily;
+
+  // Thai properties
+  /// Font size specifically for Thai script segments, overrides the base fontSize.
+  final double? thaiFontSize;
+
+  /// Text color specifically for Thai script segments, overrides the base color.
+  final Color? thaiColor;
+
+  /// Background color specifically for Thai script segments, overrides the base backgroundColor.
+  final Color? thaiBackgroundColor;
+
+  /// Font weight specifically for Thai script segments, overrides the base fontWeight.
+  final FontWeight? thaiFontWeight;
+
+  /// Font style specifically for Thai script segments, overrides the base fontStyle.
+  final FontStyle? thaiFontStyle;
+
+  /// Letter spacing specifically for Thai script segments, overrides the base letterSpacing.
+  final double? thaiLetterSpacing;
+
+  /// Word spacing specifically for Thai script segments, overrides the base wordSpacing.
+  final double? thaiWordSpacing;
+
+  /// Text baseline alignment specifically for Thai script segments.
+  final TextBaseline? thaiTextBaseline;
+
+  /// Line height specifically for Thai script segments, overrides the base height.
+  final double? thaiHeight;
+
+  /// Text leading distribution specifically for Thai script segments.
+  final ui.TextLeadingDistribution? thaiLeadingDistribution;
+
+  /// Locale specifically for Thai script segments, overrides the base locale.
+  final Locale? thaiLocale;
+
+  /// Foreground paint specifically for Thai script segments.
+  final Paint? thaiForeground;
+
+  /// Background paint specifically for Thai script segments.
+  final Paint? thaiBackground;
+
+  /// Shadow effects specifically for Thai script segments.
+  final List<Shadow>? thaiShadows;
+
+  /// Font features specifically for Thai script segments.
+  final List<FontFeature>? thaiFontFeatures;
+
+  /// Font variations specifically for Thai script segments.
+  final List<FontVariation>? thaiFontVariations;
+
+  /// Text decoration specifically for Thai script segments.
+  final TextDecoration? thaiDecoration;
+
+  /// Decoration color specifically for Thai script segments.
+  final Color? thaiDecorationColor;
+
+  /// Decoration style specifically for Thai script segments.
+  final TextDecorationStyle? thaiDecorationStyle;
+
+  /// Decoration thickness specifically for Thai script segments.
+  final double? thaiDecorationThickness;
+
+  /// Font family fallback list specifically for Thai script segments.
+  final List<String>? thaiFontFamilyFallback;
+
+  /// Font family specifically for Thai script segments. This is particularly important
+  /// for proper rendering of Thai text with tone marks.
+  final String? thaiFontFamily;
+
+  // Lao properties
+  /// Font size specifically for Lao script segments, overrides the base fontSize.
+  final double? laoFontSize;
+
+  /// Text color specifically for Lao script segments, overrides the base color.
+  final Color? laoColor;
+
+  /// Background color specifically for Lao script segments, overrides the base backgroundColor.
+  final Color? laoBackgroundColor;
+
+  /// Font weight specifically for Lao script segments, overrides the base fontWeight.
+  final FontWeight? laoFontWeight;
+
+  /// Font style specifically for Lao script segments, overrides the base fontStyle.
+  final FontStyle? laoFontStyle;
+
+  /// Letter spacing specifically for Lao script segments, overrides the base letterSpacing.
+  final double? laoLetterSpacing;
+
+  /// Word spacing specifically for Lao script segments, overrides the base wordSpacing.
+  final double? laoWordSpacing;
+
+  /// Text baseline alignment specifically for Lao script segments.
+  final TextBaseline? laoTextBaseline;
+
+  /// Line height specifically for Lao script segments, overrides the base height.
+  final double? laoHeight;
+
+  /// Text leading distribution specifically for Lao script segments.
+  final ui.TextLeadingDistribution? laoLeadingDistribution;
+
+  /// Locale specifically for Lao script segments, overrides the base locale.
+  final Locale? laoLocale;
+
+  /// Foreground paint specifically for Lao script segments.
+  final Paint? laoForeground;
+
+  /// Background paint specifically for Lao script segments.
+  final Paint? laoBackground;
+
+  /// Shadow effects specifically for Lao script segments.
+  final List<Shadow>? laoShadows;
+
+  /// Font features specifically for Lao script segments.
+  final List<FontFeature>? laoFontFeatures;
+
+  /// Font variations specifically for Lao script segments.
+  final List<FontVariation>? laoFontVariations;
+
+  /// Text decoration specifically for Lao script segments.
+  final TextDecoration? laoDecoration;
+
+  /// Decoration color specifically for Lao script segments.
+  final Color? laoDecorationColor;
+
+  /// Decoration style specifically for Lao script segments.
+  final TextDecorationStyle? laoDecorationStyle;
+
+  /// Decoration thickness specifically for Lao script segments.
+  final double? laoDecorationThickness;
+
+  /// Font family fallback list specifically for Lao script segments.
+  final List<String>? laoFontFamilyFallback;
+
+  /// Font family specifically for Lao script segments. This is particularly important
+  /// for proper rendering of Lao text.
+  final String? laoFontFamily;
+
+  // Myanmar properties
+  /// Font size specifically for Myanmar script segments, overrides the base fontSize.
+  final double? myanmarFontSize;
+
+  /// Text color specifically for Myanmar script segments, overrides the base color.
+  final Color? myanmarColor;
+
+  /// Background color specifically for Myanmar script segments, overrides the base backgroundColor.
+  final Color? myanmarBackgroundColor;
+
+  /// Font weight specifically for Myanmar script segments, overrides the base fontWeight.
+  final FontWeight? myanmarFontWeight;
+
+  /// Font style specifically for Myanmar script segments, overrides the base fontStyle.
+  final FontStyle? myanmarFontStyle;
+
+  /// Letter spacing specifically for Myanmar script segments, overrides the base letterSpacing.
+  final double? myanmarLetterSpacing;
+
+  /// Word spacing specifically for Myanmar script segments, overrides the base wordSpacing.
+  final double? myanmarWordSpacing;
+
+  /// Text baseline alignment specifically for Myanmar script segments.
+  final TextBaseline? myanmarTextBaseline;
+
+  /// Line height specifically for Myanmar script segments, overrides the base height.
+  final double? myanmarHeight;
+
+  /// Text leading distribution specifically for Myanmar script segments.
+  final ui.TextLeadingDistribution? myanmarLeadingDistribution;
+
+  /// Locale specifically for Myanmar script segments, overrides the base locale.
+  final Locale? myanmarLocale;
+
+  /// Foreground paint specifically for Myanmar script segments.
+  final Paint? myanmarForeground;
+
+  /// Background paint specifically for Myanmar script segments.
+  final Paint? myanmarBackground;
+
+  /// Shadow effects specifically for Myanmar script segments.
+  final List<Shadow>? myanmarShadows;
+
+  /// Font features specifically for Myanmar script segments.
+  final List<FontFeature>? myanmarFontFeatures;
+
+  /// Font variations specifically for Myanmar script segments.
+  final List<FontVariation>? myanmarFontVariations;
+
+  /// Text decoration specifically for Myanmar script segments.
+  final TextDecoration? myanmarDecoration;
+
+  /// Decoration color specifically for Myanmar script segments.
+  final Color? myanmarDecorationColor;
+
+  /// Decoration style specifically for Myanmar script segments.
+  final TextDecorationStyle? myanmarDecorationStyle;
+
+  /// Decoration thickness specifically for Myanmar script segments.
+  final double? myanmarDecorationThickness;
+
+  /// Font family fallback list specifically for Myanmar script segments.
+  final List<String>? myanmarFontFamilyFallback;
+
+  /// Font family specifically for Myanmar script segments. This is particularly important
+  /// for proper rendering of Myanmar text with complex glyph positioning.
+  final String? myanmarFontFamily;
+
+  // Vietnamese properties
+  /// Font size specifically for Vietnamese script segments, overrides the base fontSize.
+  final double? vietnameseFontSize;
+
+  /// Text color specifically for Vietnamese script segments, overrides the base color.
+  final Color? vietnameseColor;
+
+  /// Background color specifically for Vietnamese script segments, overrides the base backgroundColor.
+  final Color? vietnameseBackgroundColor;
+
+  /// Font weight specifically for Vietnamese script segments, overrides the base fontWeight.
+  final FontWeight? vietnameseFontWeight;
+
+  /// Font style specifically for Vietnamese script segments, overrides the base fontStyle.
+  final FontStyle? vietnameseFontStyle;
+
+  /// Letter spacing specifically for Vietnamese script segments, overrides the base letterSpacing.
+  final double? vietnameseLetterSpacing;
+
+  /// Word spacing specifically for Vietnamese script segments, overrides the base wordSpacing.
+  final double? vietnameseWordSpacing;
+
+  /// Text baseline alignment specifically for Vietnamese script segments.
+  final TextBaseline? vietnameseTextBaseline;
+
+  /// Line height specifically for Vietnamese script segments, overrides the base height.
+  final double? vietnameseHeight;
+
+  /// Text leading distribution specifically for Vietnamese script segments.
+  final ui.TextLeadingDistribution? vietnameseLeadingDistribution;
+
+  /// Locale specifically for Vietnamese script segments, overrides the base locale.
+  final Locale? vietnameseLocale;
+
+  /// Foreground paint specifically for Vietnamese script segments.
+  final Paint? vietnameseForeground;
+
+  /// Background paint specifically for Vietnamese script segments.
+  final Paint? vietnameseBackground;
+
+  /// Shadow effects specifically for Vietnamese script segments.
+  final List<Shadow>? vietnameseShadows;
+
+  /// Font features specifically for Vietnamese script segments.
+  final List<FontFeature>? vietnameseFontFeatures;
+
+  /// Font variations specifically for Vietnamese script segments.
+  final List<FontVariation>? vietnameseFontVariations;
+
+  /// Text decoration specifically for Vietnamese script segments.
+  final TextDecoration? vietnameseDecoration;
+
+  /// Decoration color specifically for Vietnamese script segments.
+  final Color? vietnameseDecorationColor;
+
+  /// Decoration style specifically for Vietnamese script segments.
+  final TextDecorationStyle? vietnameseDecorationStyle;
+
+  /// Decoration thickness specifically for Vietnamese script segments.
+  final double? vietnameseDecorationThickness;
+
+  /// Font family fallback list specifically for Vietnamese script segments.
+  final List<String>? vietnameseFontFamilyFallback;
+
+  /// Font family specifically for Vietnamese script segments. This is particularly important
+  /// for proper rendering of Vietnamese diacritics.
+  final String? vietnameseFontFamily;
 
   // Latin properties
   /// Font size specifically for Latin script segments, overrides the base fontSize.
@@ -331,6 +606,102 @@ class LocalizedRichText extends StatelessWidget {
     this.khmerFontFamilyFallback,
     this.khmerFontFamily,
 
+    // Thai properties
+    this.thaiFontSize,
+    this.thaiColor,
+    this.thaiBackgroundColor,
+    this.thaiFontWeight,
+    this.thaiFontStyle,
+    this.thaiLetterSpacing,
+    this.thaiWordSpacing,
+    this.thaiTextBaseline,
+    this.thaiHeight,
+    this.thaiLeadingDistribution,
+    this.thaiLocale,
+    this.thaiForeground,
+    this.thaiBackground,
+    this.thaiShadows,
+    this.thaiFontFeatures,
+    this.thaiFontVariations,
+    this.thaiDecoration,
+    this.thaiDecorationColor,
+    this.thaiDecorationStyle,
+    this.thaiDecorationThickness,
+    this.thaiFontFamilyFallback,
+    this.thaiFontFamily,
+
+    // Lao properties
+    this.laoFontSize,
+    this.laoColor,
+    this.laoBackgroundColor,
+    this.laoFontWeight,
+    this.laoFontStyle,
+    this.laoLetterSpacing,
+    this.laoWordSpacing,
+    this.laoTextBaseline,
+    this.laoHeight,
+    this.laoLeadingDistribution,
+    this.laoLocale,
+    this.laoForeground,
+    this.laoBackground,
+    this.laoShadows,
+    this.laoFontFeatures,
+    this.laoFontVariations,
+    this.laoDecoration,
+    this.laoDecorationColor,
+    this.laoDecorationStyle,
+    this.laoDecorationThickness,
+    this.laoFontFamilyFallback,
+    this.laoFontFamily,
+
+    // Myanmar properties
+    this.myanmarFontSize,
+    this.myanmarColor,
+    this.myanmarBackgroundColor,
+    this.myanmarFontWeight,
+    this.myanmarFontStyle,
+    this.myanmarLetterSpacing,
+    this.myanmarWordSpacing,
+    this.myanmarTextBaseline,
+    this.myanmarHeight,
+    this.myanmarLeadingDistribution,
+    this.myanmarLocale,
+    this.myanmarForeground,
+    this.myanmarBackground,
+    this.myanmarShadows,
+    this.myanmarFontFeatures,
+    this.myanmarFontVariations,
+    this.myanmarDecoration,
+    this.myanmarDecorationColor,
+    this.myanmarDecorationStyle,
+    this.myanmarDecorationThickness,
+    this.myanmarFontFamilyFallback,
+    this.myanmarFontFamily,
+
+    // Vietnamese properties
+    this.vietnameseFontSize,
+    this.vietnameseColor,
+    this.vietnameseBackgroundColor,
+    this.vietnameseFontWeight,
+    this.vietnameseFontStyle,
+    this.vietnameseLetterSpacing,
+    this.vietnameseWordSpacing,
+    this.vietnameseTextBaseline,
+    this.vietnameseHeight,
+    this.vietnameseLeadingDistribution,
+    this.vietnameseLocale,
+    this.vietnameseForeground,
+    this.vietnameseBackground,
+    this.vietnameseShadows,
+    this.vietnameseFontFeatures,
+    this.vietnameseFontVariations,
+    this.vietnameseDecoration,
+    this.vietnameseDecorationColor,
+    this.vietnameseDecorationStyle,
+    this.vietnameseDecorationThickness,
+    this.vietnameseFontFamilyFallback,
+    this.vietnameseFontFamily,
+
     // Latin properties
     this.latinFontSize,
     this.latinColor,
@@ -376,12 +747,16 @@ class LocalizedRichText extends StatelessWidget {
   /// - [fontWeight]: Font weight to apply to all text segments
   /// - [textAlign]: Text alignment within its container (default: TextAlign.start)
   /// - [khmerFontFamily]: Font family to use specifically for Khmer script segments
+  /// - [thaiFontFamily]: Font family to use specifically for Thai script segments
+  /// - [laoFontFamily]: Font family to use specifically for Lao script segments
+  /// - [myanmarFontFamily]: Font family to use specifically for Myanmar script segments
+  /// - [vietnameseFontFamily]: Font family to use specifically for Vietnamese script segments
   /// - [latinFontFamily]: Font family to use specifically for Latin script segments
   ///
   /// Example:
   /// ```dart
   /// LocalizedRichText.simple(
-  ///   text: 'English និងខ្មែរ mixed together',
+  ///   text: 'English និងខ្មែរ และไทย ສະບາຍດີ မဂၤလာပါ Tiếng Việt mixed together',
   ///   fontSize: 16,
   ///   color: Colors.black,
   /// )
@@ -393,6 +768,10 @@ class LocalizedRichText extends StatelessWidget {
     FontWeight? fontWeight,
     TextAlign textAlign = TextAlign.start,
     String? khmerFontFamily,
+    String? thaiFontFamily,
+    String? laoFontFamily,
+    String? myanmarFontFamily,
+    String? vietnameseFontFamily,
     String? latinFontFamily,
   }) {
     return LocalizedRichText(
@@ -402,6 +781,10 @@ class LocalizedRichText extends StatelessWidget {
       fontWeight: fontWeight,
       textAlign: textAlign,
       khmerFontFamily: khmerFontFamily,
+      thaiFontFamily: thaiFontFamily,
+      laoFontFamily: laoFontFamily,
+      myanmarFontFamily: myanmarFontFamily,
+      vietnameseFontFamily: vietnameseFontFamily,
       latinFontFamily: latinFontFamily,
     );
   }
@@ -503,6 +886,102 @@ class LocalizedRichText extends StatelessWidget {
       khmerDecorationThickness: khmerDecorationThickness,
       khmerFontFamilyFallback: khmerFontFamilyFallback,
       khmerFontFamily: khmerFontFamily,
+
+      // Thai properties
+      thaiFontSize: thaiFontSize,
+      thaiColor: thaiColor,
+      thaiBackgroundColor: thaiBackgroundColor,
+      thaiFontWeight: thaiFontWeight,
+      thaiFontStyle: thaiFontStyle,
+      thaiLetterSpacing: thaiLetterSpacing,
+      thaiWordSpacing: thaiWordSpacing,
+      thaiTextBaseline: thaiTextBaseline,
+      thaiHeight: thaiHeight,
+      thaiLeadingDistribution: thaiLeadingDistribution,
+      thaiLocale: thaiLocale,
+      thaiForeground: thaiForeground,
+      thaiBackground: thaiBackground,
+      thaiShadows: thaiShadows,
+      thaiFontFeatures: thaiFontFeatures,
+      thaiFontVariations: thaiFontVariations,
+      thaiDecoration: thaiDecoration,
+      thaiDecorationColor: thaiDecorationColor,
+      thaiDecorationStyle: thaiDecorationStyle,
+      thaiDecorationThickness: thaiDecorationThickness,
+      thaiFontFamilyFallback: thaiFontFamilyFallback,
+      thaiFontFamily: thaiFontFamily,
+
+      // Lao properties
+      laoFontSize: laoFontSize,
+      laoColor: laoColor,
+      laoBackgroundColor: laoBackgroundColor,
+      laoFontWeight: laoFontWeight,
+      laoFontStyle: laoFontStyle,
+      laoLetterSpacing: laoLetterSpacing,
+      laoWordSpacing: laoWordSpacing,
+      laoTextBaseline: laoTextBaseline,
+      laoHeight: laoHeight,
+      laoLeadingDistribution: laoLeadingDistribution,
+      laoLocale: laoLocale,
+      laoForeground: laoForeground,
+      laoBackground: laoBackground,
+      laoShadows: laoShadows,
+      laoFontFeatures: laoFontFeatures,
+      laoFontVariations: laoFontVariations,
+      laoDecoration: laoDecoration,
+      laoDecorationColor: laoDecorationColor,
+      laoDecorationStyle: laoDecorationStyle,
+      laoDecorationThickness: laoDecorationThickness,
+      laoFontFamilyFallback: laoFontFamilyFallback,
+      laoFontFamily: laoFontFamily,
+
+      // Myanmar properties
+      myanmarFontSize: myanmarFontSize,
+      myanmarColor: myanmarColor,
+      myanmarBackgroundColor: myanmarBackgroundColor,
+      myanmarFontWeight: myanmarFontWeight,
+      myanmarFontStyle: myanmarFontStyle,
+      myanmarLetterSpacing: myanmarLetterSpacing,
+      myanmarWordSpacing: myanmarWordSpacing,
+      myanmarTextBaseline: myanmarTextBaseline,
+      myanmarHeight: myanmarHeight,
+      myanmarLeadingDistribution: myanmarLeadingDistribution,
+      myanmarLocale: myanmarLocale,
+      myanmarForeground: myanmarForeground,
+      myanmarBackground: myanmarBackground,
+      myanmarShadows: myanmarShadows,
+      myanmarFontFeatures: myanmarFontFeatures,
+      myanmarFontVariations: myanmarFontVariations,
+      myanmarDecoration: myanmarDecoration,
+      myanmarDecorationColor: myanmarDecorationColor,
+      myanmarDecorationStyle: myanmarDecorationStyle,
+      myanmarDecorationThickness: myanmarDecorationThickness,
+      myanmarFontFamilyFallback: myanmarFontFamilyFallback,
+      myanmarFontFamily: myanmarFontFamily,
+
+      // Vietnamese properties
+      vietnameseFontSize: vietnameseFontSize,
+      vietnameseColor: vietnameseColor,
+      vietnameseBackgroundColor: vietnameseBackgroundColor,
+      vietnameseFontWeight: vietnameseFontWeight,
+      vietnameseFontStyle: vietnameseFontStyle,
+      vietnameseLetterSpacing: vietnameseLetterSpacing,
+      vietnameseWordSpacing: vietnameseWordSpacing,
+      vietnameseTextBaseline: vietnameseTextBaseline,
+      vietnameseHeight: vietnameseHeight,
+      vietnameseLeadingDistribution: vietnameseLeadingDistribution,
+      vietnameseLocale: vietnameseLocale,
+      vietnameseForeground: vietnameseForeground,
+      vietnameseBackground: vietnameseBackground,
+      vietnameseShadows: vietnameseShadows,
+      vietnameseFontFeatures: vietnameseFontFeatures,
+      vietnameseFontVariations: vietnameseFontVariations,
+      vietnameseDecoration: vietnameseDecoration,
+      vietnameseDecorationColor: vietnameseDecorationColor,
+      vietnameseDecorationStyle: vietnameseDecorationStyle,
+      vietnameseDecorationThickness: vietnameseDecorationThickness,
+      vietnameseFontFamilyFallback: vietnameseFontFamilyFallback,
+      vietnameseFontFamily: vietnameseFontFamily,
 
       // Latin properties
       latinFontSize: latinFontSize,

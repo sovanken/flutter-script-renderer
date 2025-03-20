@@ -7,7 +7,7 @@
 ///
 /// ## Key Components
 ///
-/// * [ScriptType]: Enum defining supported script types (Khmer, Latin, neutral)
+/// * [ScriptType]: Enum defining supported script types (Khmer, Thai, Lao, Myanmar, Vietnamese, Latin, neutral)
 /// * [LocalizedRichText]: The primary widget for rendering multi-script text
 /// * [FontRegistry]: Central registry of font families for different scripts
 /// * Extension methods:
@@ -17,34 +17,40 @@
 /// ## Features
 ///
 /// * Automatic script detection within text strings
-/// * Script-specific font and style application
+/// * Script-specific font and style application for Southeast Asian scripts
 /// * Comprehensive styling customization per script type
 /// * Performance optimized for mixed script rendering
 /// * Extension methods for simplified usage
+/// * Support for Khmer, Thai, Lao, Myanmar, Vietnamese, and Latin scripts
 ///
 /// ## Basic Usage
 ///
 /// ```dart
 /// LocalizedRichText(
-///   text: 'English text និងអក្សរខ្មែរ in the same string.',
+///   text: 'English text និងអក្សរខ្មែរ และภาษาไทย ສະບາຍດີ မင်္ဂလာပါ Tiếng Việt',
 ///   fontSize: 16,
 ///   khmerColor: Colors.red,
+///   thaiColor: Colors.blue,
 ///   latinFontFamily: FontRegistry.latinPoppins,
+///   thaiFontFamily: FontRegistry.thaiSarabun,
 /// )
 /// ```
 ///
 /// ## Extension Method Usage
 ///
 /// ```dart
-/// 'English text និងអក្សរខ្មែរ mixed together'.toLocalizedText(
+/// 'English text និងអក្សរខ្មែរ และข้อความไทย'.toLocalizedText(
 ///   fontSize: 16,
 ///   color: Colors.blue,
+///   khmerFontFamily: FontRegistry.khmerBattambang,
+///   thaiFontFamily: FontRegistry.thaiSarabun,
 /// )
 /// ```
 ///
 /// This package is particularly valuable for applications serving multilingual
 /// communities or regions where text commonly combines different scripts, such as
-/// Cambodia, Thailand, and other Southeast Asian countries.
+/// Cambodia, Thailand, Laos, Myanmar, Vietnam, and other Southeast Asian countries
+/// where multiple scripts may be used together.
 library flutter_script_renderer;
 
 // Export public API

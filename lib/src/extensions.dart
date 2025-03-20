@@ -5,11 +5,12 @@ import '../flutter_script_renderer.dart';
 ///
 /// This extension provides a convenient way to convert any string into a
 /// properly formatted multilingual text widget that automatically detects
-/// and styles different scripts (Khmer and Latin) within the string.
+/// and styles different scripts (Khmer, Thai, Lao, Myanmar, Vietnamese, and Latin)
+/// within the string.
 ///
 /// Example usage:
 /// ```dart
-/// 'Hello world និងសួស្តី'.toLocalizedText(
+/// 'Hello world និងសួស្តី และสวัสดี'.toLocalizedText(
 ///   fontSize: 16,
 ///   color: Colors.blue,
 /// )
@@ -27,6 +28,10 @@ extension LocalizedTextExtension on String {
   /// - [fontWeight]: Base font weight for all text segments
   /// - [textAlign]: Alignment of text within its container (default: TextAlign.start)
   /// - [khmerFontFamily]: Optional custom font family for Khmer script segments
+  /// - [thaiFontFamily]: Optional custom font family for Thai script segments
+  /// - [laoFontFamily]: Optional custom font family for Lao script segments
+  /// - [myanmarFontFamily]: Optional custom font family for Myanmar script segments
+  /// - [vietnameseFontFamily]: Optional custom font family for Vietnamese script segments
   /// - [latinFontFamily]: Optional custom font family for Latin script segments
   /// - [overflow]: How to handle text overflow (default: TextOverflow.clip)
   /// - [maxLines]: Maximum number of lines to display (null for unlimited)
@@ -40,6 +45,10 @@ extension LocalizedTextExtension on String {
     FontWeight? fontWeight,
     TextAlign textAlign = TextAlign.start,
     String? khmerFontFamily,
+    String? thaiFontFamily,
+    String? laoFontFamily,
+    String? myanmarFontFamily,
+    String? vietnameseFontFamily,
     String? latinFontFamily,
     TextOverflow overflow = TextOverflow.clip,
     int? maxLines,
@@ -51,6 +60,10 @@ extension LocalizedTextExtension on String {
       fontWeight: fontWeight,
       textAlign: textAlign,
       khmerFontFamily: khmerFontFamily,
+      thaiFontFamily: thaiFontFamily,
+      laoFontFamily: laoFontFamily,
+      myanmarFontFamily: myanmarFontFamily,
+      vietnameseFontFamily: vietnameseFontFamily,
       latinFontFamily: latinFontFamily,
     );
   }
@@ -66,7 +79,7 @@ extension LocalizedTextExtension on String {
 /// Example usage:
 /// ```dart
 /// context.localizedText(
-///   'Theme-styled text ជាមួយនឹងរចនាបទពីប្រធានបទ',
+///   'Theme-styled text ជាមួយនឹងរចនាបទពីប្រធានបទ และข้อความไทย',
 ///   fontSize: 18,
 /// )
 /// ```
@@ -85,6 +98,10 @@ extension LocalizedTextContextExtension on BuildContext {
   /// - [fontWeight]: Custom font weight, or null to use theme's bodyMedium fontWeight
   /// - [textAlign]: Alignment of text within its container (default: TextAlign.start)
   /// - [khmerFontFamily]: Optional custom font family for Khmer script segments
+  /// - [thaiFontFamily]: Optional custom font family for Thai script segments
+  /// - [laoFontFamily]: Optional custom font family for Lao script segments
+  /// - [myanmarFontFamily]: Optional custom font family for Myanmar script segments
+  /// - [vietnameseFontFamily]: Optional custom font family for Vietnamese script segments
   /// - [latinFontFamily]: Optional custom font family for Latin script segments
   /// - [overflow]: How to handle text overflow (default: TextOverflow.clip)
   /// - [maxLines]: Maximum number of lines to display (null for unlimited)
@@ -99,6 +116,10 @@ extension LocalizedTextContextExtension on BuildContext {
     FontWeight? fontWeight,
     TextAlign textAlign = TextAlign.start,
     String? khmerFontFamily,
+    String? thaiFontFamily,
+    String? laoFontFamily,
+    String? myanmarFontFamily,
+    String? vietnameseFontFamily,
     String? latinFontFamily,
     TextOverflow overflow = TextOverflow.clip,
     int? maxLines,
@@ -112,6 +133,10 @@ extension LocalizedTextContextExtension on BuildContext {
       fontWeight: fontWeight ?? theme.textTheme.bodyMedium?.fontWeight,
       textAlign: textAlign,
       khmerFontFamily: khmerFontFamily,
+      thaiFontFamily: thaiFontFamily,
+      laoFontFamily: laoFontFamily,
+      myanmarFontFamily: myanmarFontFamily,
+      vietnameseFontFamily: vietnameseFontFamily,
       latinFontFamily: latinFontFamily,
     );
   }

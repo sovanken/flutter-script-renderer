@@ -32,18 +32,22 @@ class LocalizedTextStyle {
   /// 2. Base properties (e.g., fontSize)
   /// 3. System defaults
   ///
-  /// Parameters are organized into three groups:
+  /// Parameters are organized into groups:
   /// - Base properties: Applied to all text segments as defaults
   /// - Khmer properties: Overrides for Khmer script segments
+  /// - Thai properties: Overrides for Thai script segments
+  /// - Lao properties: Overrides for Lao script segments
+  /// - Myanmar properties: Overrides for Myanmar script segments
+  /// - Vietnamese properties: Overrides for Vietnamese script segments
   /// - Latin properties: Overrides for Latin script segments
   ///
   /// Example usage:
   /// ```dart
-  /// TextStyle khmerStyle = LocalizedTextStyle.getTextStyle(
-  ///   type: ScriptType.khmer,
+  /// TextStyle thaiStyle = LocalizedTextStyle.getTextStyle(
+  ///   type: ScriptType.thai,
   ///   fontSize: 16.0,
   ///   color: Colors.black,
-  ///   khmerFontFamily: 'Battambang',
+  ///   thaiFontFamily: 'Sarabun',
   /// );
   /// ```
   ///
@@ -192,6 +196,278 @@ class LocalizedTextStyle {
     /// This is particularly important for proper rendering of Khmer text.
     String? khmerFontFamily,
 
+    // Thai properties - override base properties for Thai script
+    /// Font size specifically for Thai script segments, overrides base fontSize.
+    double? thaiFontSize,
+
+    /// Text color specifically for Thai script segments, overrides base color.
+    Color? thaiColor,
+
+    /// Background color specifically for Thai script segments, overrides base backgroundColor.
+    Color? thaiBackgroundColor,
+
+    /// Font weight specifically for Thai script segments, overrides base fontWeight.
+    FontWeight? thaiFontWeight,
+
+    /// Font style specifically for Thai script segments, overrides base fontStyle.
+    FontStyle? thaiFontStyle,
+
+    /// Letter spacing specifically for Thai script segments, overrides base letterSpacing.
+    double? thaiLetterSpacing,
+
+    /// Word spacing specifically for Thai script segments, overrides base wordSpacing.
+    double? thaiWordSpacing,
+
+    /// Text baseline alignment specifically for Thai script segments.
+    TextBaseline? thaiTextBaseline,
+
+    /// Line height specifically for Thai script segments, overrides base height.
+    double? thaiHeight,
+
+    /// Text leading distribution specifically for Thai script segments.
+    TextLeadingDistribution? thaiLeadingDistribution,
+
+    /// Locale specifically for Thai script segments, overrides base locale.
+    Locale? thaiLocale,
+
+    /// Foreground paint specifically for Thai script segments.
+    Paint? thaiForeground,
+
+    /// Background paint specifically for Thai script segments.
+    Paint? thaiBackground,
+
+    /// Shadow effects specifically for Thai script segments.
+    List<Shadow>? thaiShadows,
+
+    /// Font features specifically for Thai script segments.
+    List<FontFeature>? thaiFontFeatures,
+
+    /// Font variations specifically for Thai script segments.
+    List<FontVariation>? thaiFontVariations,
+
+    /// Text decoration specifically for Thai script segments.
+    TextDecoration? thaiDecoration,
+
+    /// Decoration color specifically for Thai script segments.
+    Color? thaiDecorationColor,
+
+    /// Decoration style specifically for Thai script segments.
+    TextDecorationStyle? thaiDecorationStyle,
+
+    /// Decoration thickness specifically for Thai script segments.
+    double? thaiDecorationThickness,
+
+    /// Font family fallback list specifically for Thai script segments.
+    List<String>? thaiFontFamilyFallback,
+
+    /// Font family specifically for Thai script segments.
+    /// This is particularly important for proper rendering of Thai text with tone marks.
+    String? thaiFontFamily,
+
+    // Lao properties - override base properties for Lao script
+    /// Font size specifically for Lao script segments, overrides base fontSize.
+    double? laoFontSize,
+
+    /// Text color specifically for Lao script segments, overrides base color.
+    Color? laoColor,
+
+    /// Background color specifically for Lao script segments, overrides base backgroundColor.
+    Color? laoBackgroundColor,
+
+    /// Font weight specifically for Lao script segments, overrides base fontWeight.
+    FontWeight? laoFontWeight,
+
+    /// Font style specifically for Lao script segments, overrides base fontStyle.
+    FontStyle? laoFontStyle,
+
+    /// Letter spacing specifically for Lao script segments, overrides base letterSpacing.
+    double? laoLetterSpacing,
+
+    /// Word spacing specifically for Lao script segments, overrides base wordSpacing.
+    double? laoWordSpacing,
+
+    /// Text baseline alignment specifically for Lao script segments.
+    TextBaseline? laoTextBaseline,
+
+    /// Line height specifically for Lao script segments, overrides base height.
+    double? laoHeight,
+
+    /// Text leading distribution specifically for Lao script segments.
+    TextLeadingDistribution? laoLeadingDistribution,
+
+    /// Locale specifically for Lao script segments, overrides base locale.
+    Locale? laoLocale,
+
+    /// Foreground paint specifically for Lao script segments.
+    Paint? laoForeground,
+
+    /// Background paint specifically for Lao script segments.
+    Paint? laoBackground,
+
+    /// Shadow effects specifically for Lao script segments.
+    List<Shadow>? laoShadows,
+
+    /// Font features specifically for Lao script segments.
+    List<FontFeature>? laoFontFeatures,
+
+    /// Font variations specifically for Lao script segments.
+    List<FontVariation>? laoFontVariations,
+
+    /// Text decoration specifically for Lao script segments.
+    TextDecoration? laoDecoration,
+
+    /// Decoration color specifically for Lao script segments.
+    Color? laoDecorationColor,
+
+    /// Decoration style specifically for Lao script segments.
+    TextDecorationStyle? laoDecorationStyle,
+
+    /// Decoration thickness specifically for Lao script segments.
+    double? laoDecorationThickness,
+
+    /// Font family fallback list specifically for Lao script segments.
+    List<String>? laoFontFamilyFallback,
+
+    /// Font family specifically for Lao script segments.
+    /// This is particularly important for proper rendering of Lao text.
+    String? laoFontFamily,
+
+    // Myanmar properties - override base properties for Myanmar script
+    /// Font size specifically for Myanmar script segments, overrides base fontSize.
+    double? myanmarFontSize,
+
+    /// Text color specifically for Myanmar script segments, overrides base color.
+    Color? myanmarColor,
+
+    /// Background color specifically for Myanmar script segments, overrides base backgroundColor.
+    Color? myanmarBackgroundColor,
+
+    /// Font weight specifically for Myanmar script segments, overrides base fontWeight.
+    FontWeight? myanmarFontWeight,
+
+    /// Font style specifically for Myanmar script segments, overrides base fontStyle.
+    FontStyle? myanmarFontStyle,
+
+    /// Letter spacing specifically for Myanmar script segments, overrides base letterSpacing.
+    double? myanmarLetterSpacing,
+
+    /// Word spacing specifically for Myanmar script segments, overrides base wordSpacing.
+    double? myanmarWordSpacing,
+
+    /// Text baseline alignment specifically for Myanmar script segments.
+    TextBaseline? myanmarTextBaseline,
+
+    /// Line height specifically for Myanmar script segments, overrides base height.
+    double? myanmarHeight,
+
+    /// Text leading distribution specifically for Myanmar script segments.
+    TextLeadingDistribution? myanmarLeadingDistribution,
+
+    /// Locale specifically for Myanmar script segments, overrides base locale.
+    Locale? myanmarLocale,
+
+    /// Foreground paint specifically for Myanmar script segments.
+    Paint? myanmarForeground,
+
+    /// Background paint specifically for Myanmar script segments.
+    Paint? myanmarBackground,
+
+    /// Shadow effects specifically for Myanmar script segments.
+    List<Shadow>? myanmarShadows,
+
+    /// Font features specifically for Myanmar script segments.
+    List<FontFeature>? myanmarFontFeatures,
+
+    /// Font variations specifically for Myanmar script segments.
+    List<FontVariation>? myanmarFontVariations,
+
+    /// Text decoration specifically for Myanmar script segments.
+    TextDecoration? myanmarDecoration,
+
+    /// Decoration color specifically for Myanmar script segments.
+    Color? myanmarDecorationColor,
+
+    /// Decoration style specifically for Myanmar script segments.
+    TextDecorationStyle? myanmarDecorationStyle,
+
+    /// Decoration thickness specifically for Myanmar script segments.
+    double? myanmarDecorationThickness,
+
+    /// Font family fallback list specifically for Myanmar script segments.
+    List<String>? myanmarFontFamilyFallback,
+
+    /// Font family specifically for Myanmar script segments.
+    /// This is particularly important for proper rendering of Myanmar text.
+    String? myanmarFontFamily,
+
+    // Vietnamese properties - override base properties for Vietnamese script
+    /// Font size specifically for Vietnamese script segments, overrides base fontSize.
+    double? vietnameseFontSize,
+
+    /// Text color specifically for Vietnamese script segments, overrides base color.
+    Color? vietnameseColor,
+
+    /// Background color specifically for Vietnamese script segments, overrides base backgroundColor.
+    Color? vietnameseBackgroundColor,
+
+    /// Font weight specifically for Vietnamese script segments, overrides base fontWeight.
+    FontWeight? vietnameseFontWeight,
+
+    /// Font style specifically for Vietnamese script segments, overrides base fontStyle.
+    FontStyle? vietnameseFontStyle,
+
+    /// Letter spacing specifically for Vietnamese script segments, overrides base letterSpacing.
+    double? vietnameseLetterSpacing,
+
+    /// Word spacing specifically for Vietnamese script segments, overrides base wordSpacing.
+    double? vietnameseWordSpacing,
+
+    /// Text baseline alignment specifically for Vietnamese script segments.
+    TextBaseline? vietnameseTextBaseline,
+
+    /// Line height specifically for Vietnamese script segments, overrides base height.
+    double? vietnameseHeight,
+
+    /// Text leading distribution specifically for Vietnamese script segments.
+    TextLeadingDistribution? vietnameseLeadingDistribution,
+
+    /// Locale specifically for Vietnamese script segments, overrides base locale.
+    Locale? vietnameseLocale,
+
+    /// Foreground paint specifically for Vietnamese script segments.
+    Paint? vietnameseForeground,
+
+    /// Background paint specifically for Vietnamese script segments.
+    Paint? vietnameseBackground,
+
+    /// Shadow effects specifically for Vietnamese script segments.
+    List<Shadow>? vietnameseShadows,
+
+    /// Font features specifically for Vietnamese script segments.
+    List<FontFeature>? vietnameseFontFeatures,
+
+    /// Font variations specifically for Vietnamese script segments.
+    List<FontVariation>? vietnameseFontVariations,
+
+    /// Text decoration specifically for Vietnamese script segments.
+    TextDecoration? vietnameseDecoration,
+
+    /// Decoration color specifically for Vietnamese script segments.
+    Color? vietnameseDecorationColor,
+
+    /// Decoration style specifically for Vietnamese script segments.
+    TextDecorationStyle? vietnameseDecorationStyle,
+
+    /// Decoration thickness specifically for Vietnamese script segments.
+    double? vietnameseDecorationThickness,
+
+    /// Font family fallback list specifically for Vietnamese script segments.
+    List<String>? vietnameseFontFamilyFallback,
+
+    /// Font family specifically for Vietnamese script segments.
+    /// This is particularly important for proper rendering of Vietnamese diacritics.
+    String? vietnameseFontFamily,
+
     // Latin properties - override base properties for Latin script
     /// Font size specifically for Latin script segments, overrides base fontSize.
     double? latinFontSize,
@@ -312,6 +588,110 @@ class LocalizedTextStyle {
       fontFamily: khmerFontFamily,
     );
 
+    // Create Thai-specific properties object if Thai-specific properties are provided
+    final thaiProperties = ScriptStyleProperties(
+      fontSize: thaiFontSize,
+      color: thaiColor,
+      backgroundColor: thaiBackgroundColor,
+      fontWeight: thaiFontWeight,
+      fontStyle: thaiFontStyle,
+      letterSpacing: thaiLetterSpacing,
+      wordSpacing: thaiWordSpacing,
+      textBaseline: thaiTextBaseline,
+      height: thaiHeight,
+      leadingDistribution: thaiLeadingDistribution,
+      locale: thaiLocale,
+      foreground: thaiForeground,
+      background: thaiBackground,
+      shadows: thaiShadows,
+      fontFeatures: thaiFontFeatures,
+      fontVariations: thaiFontVariations,
+      decoration: thaiDecoration,
+      decorationColor: thaiDecorationColor,
+      decorationStyle: thaiDecorationStyle,
+      decorationThickness: thaiDecorationThickness,
+      fontFamilyFallback: thaiFontFamilyFallback,
+      fontFamily: thaiFontFamily,
+    );
+
+    // Create Lao-specific properties object if Lao-specific properties are provided
+    final laoProperties = ScriptStyleProperties(
+      fontSize: laoFontSize,
+      color: laoColor,
+      backgroundColor: laoBackgroundColor,
+      fontWeight: laoFontWeight,
+      fontStyle: laoFontStyle,
+      letterSpacing: laoLetterSpacing,
+      wordSpacing: laoWordSpacing,
+      textBaseline: laoTextBaseline,
+      height: laoHeight,
+      leadingDistribution: laoLeadingDistribution,
+      locale: laoLocale,
+      foreground: laoForeground,
+      background: laoBackground,
+      shadows: laoShadows,
+      fontFeatures: laoFontFeatures,
+      fontVariations: laoFontVariations,
+      decoration: laoDecoration,
+      decorationColor: laoDecorationColor,
+      decorationStyle: laoDecorationStyle,
+      decorationThickness: laoDecorationThickness,
+      fontFamilyFallback: laoFontFamilyFallback,
+      fontFamily: laoFontFamily,
+    );
+
+    // Create Myanmar-specific properties object if Myanmar-specific properties are provided
+    final myanmarProperties = ScriptStyleProperties(
+      fontSize: myanmarFontSize,
+      color: myanmarColor,
+      backgroundColor: myanmarBackgroundColor,
+      fontWeight: myanmarFontWeight,
+      fontStyle: myanmarFontStyle,
+      letterSpacing: myanmarLetterSpacing,
+      wordSpacing: myanmarWordSpacing,
+      textBaseline: myanmarTextBaseline,
+      height: myanmarHeight,
+      leadingDistribution: myanmarLeadingDistribution,
+      locale: myanmarLocale,
+      foreground: myanmarForeground,
+      background: myanmarBackground,
+      shadows: myanmarShadows,
+      fontFeatures: myanmarFontFeatures,
+      fontVariations: myanmarFontVariations,
+      decoration: myanmarDecoration,
+      decorationColor: myanmarDecorationColor,
+      decorationStyle: myanmarDecorationStyle,
+      decorationThickness: myanmarDecorationThickness,
+      fontFamilyFallback: myanmarFontFamilyFallback,
+      fontFamily: myanmarFontFamily,
+    );
+
+    // Create Vietnamese-specific properties object if Vietnamese-specific properties are provided
+    final vietnameseProperties = ScriptStyleProperties(
+      fontSize: vietnameseFontSize,
+      color: vietnameseColor,
+      backgroundColor: vietnameseBackgroundColor,
+      fontWeight: vietnameseFontWeight,
+      fontStyle: vietnameseFontStyle,
+      letterSpacing: vietnameseLetterSpacing,
+      wordSpacing: vietnameseWordSpacing,
+      textBaseline: vietnameseTextBaseline,
+      height: vietnameseHeight,
+      leadingDistribution: vietnameseLeadingDistribution,
+      locale: vietnameseLocale,
+      foreground: vietnameseForeground,
+      background: vietnameseBackground,
+      shadows: vietnameseShadows,
+      fontFeatures: vietnameseFontFeatures,
+      fontVariations: vietnameseFontVariations,
+      decoration: vietnameseDecoration,
+      decorationColor: vietnameseDecorationColor,
+      decorationStyle: vietnameseDecorationStyle,
+      decorationThickness: vietnameseDecorationThickness,
+      fontFamilyFallback: vietnameseFontFamilyFallback,
+      fontFamily: vietnameseFontFamily,
+    );
+
     // Create Latin-specific properties object if Latin-specific properties are provided
     final latinProperties = ScriptStyleProperties(
       fontSize: latinFontSize,
@@ -344,6 +724,10 @@ class LocalizedTextStyle {
       type: type,
       baseProperties: baseProperties,
       khmerProperties: khmerProperties,
+      thaiProperties: thaiProperties,
+      laoProperties: laoProperties,
+      myanmarProperties: myanmarProperties,
+      vietnameseProperties: vietnameseProperties,
       latinProperties: latinProperties,
     );
   }

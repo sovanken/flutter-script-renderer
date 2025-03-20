@@ -9,7 +9,7 @@ import '../core/enums/script_type.dart';
 /// consistent font usage across different components.
 ///
 /// The registry includes:
-/// - Predefined font family constants for Khmer and Latin scripts
+/// - Predefined font family constants for Khmer, Latin, Thai, Lao, Myanmar, and Vietnamese scripts
 /// - Default font selection for each script type
 /// - Recommended fallback font chains for graceful degradation
 /// - Font weight constants for semantic weight specification
@@ -97,6 +97,82 @@ class FontRegistry {
   /// An iOS-like font appearance for iOS-styled applications.
   static const String latinSFNSDisplay = 'SFNSDisplay';
 
+  // Thai fonts
+  /// ChakraPetch font for Thai script.
+  /// A modern, technical-looking font suitable for interfaces and displays.
+  static const String thaiChakraPetch = 'ChakraPetch';
+
+  /// Kanit font for Thai script.
+  /// A versatile font family with excellent readability across different weights.
+  static const String thaiKanit = 'Kanit';
+
+  /// Mitr font for Thai script.
+  /// A contemporary humanist sans-serif font with a friendly appearance.
+  static const String thaiMitr = 'Mitr';
+
+  /// Noto Sans Thai font.
+  /// A comprehensive font supporting the full range of Thai characters.
+  static const String thaiNotoSansThai = 'NotoSansThai';
+
+  /// Prompt font for Thai script.
+  /// A modern geometric sans-serif with excellent screen readability.
+  static const String thaiPrompt = 'Prompt';
+
+  /// Sarabun font for Thai script.
+  /// A versatile font suitable for both display and body text.
+  static const String thaiSarabun = 'Sarabun';
+
+  /// Taviraj font for Thai script.
+  /// An elegant serif font suitable for formal or traditional contexts.
+  static const String thaiTaviraj = 'Taviraj';
+
+  // Lao fonts
+  /// Noto Sans Lao font.
+  /// A comprehensive font supporting the full range of Lao characters.
+  static const String laoNotoSansLao = 'NotoSansLao';
+
+  /// Noto Sans Lao Looped font.
+  /// A variant of Noto Sans with looped terminals for Lao script.
+  static const String laoNotoSansLaoLooped = 'NotoSansLaoLooped';
+
+  /// Noto Serif Lao font.
+  /// A serif font for Lao script with traditional appearance.
+  static const String laoNotoSerifLao = 'NotoSerifLao';
+
+  /// Phetsarath font for Lao script.
+  /// The most common and widely used Lao font with good readability.
+  static const String laoPhetsarath = 'Phetsarath';
+
+  // Myanmar fonts
+  /// Noto Sans Myanmar font.
+  /// A comprehensive font supporting the full range of Myanmar characters.
+  static const String myanmarNotoSansMyanmar = 'NotoSansMyanmar';
+
+  /// Noto Serif Myanmar font.
+  /// A serif font for Myanmar script with traditional appearance.
+  static const String myanmarNotoSerifMyanmar = 'NotoSerifMyanmar';
+
+  /// Padauk font for Myanmar script.
+  /// A popular and widely compatible Myanmar font.
+  static const String myanmarPadauk = 'Padauk';
+
+  // Vietnamese fonts
+  /// Be Vietnam Pro font for Vietnamese text.
+  /// A modern geometric sans-serif with excellent support for Vietnamese diacritics.
+  static const String vietnameseBeVietnamPro = 'BeVietnamPro';
+
+  /// Lora font for Vietnamese text.
+  /// An elegant serif font with good support for Vietnamese characters.
+  static const String vietnameseLora = 'Lora';
+
+  /// Merriweather font for Vietnamese text.
+  /// A serif font with strong characters and good readability.
+  static const String vietnameseMerriweather = 'Merriweather';
+
+  /// Merriweather Sans font for Vietnamese text.
+  /// A sans-serif variant with good support for Vietnamese diacritics.
+  static const String vietnameseMerriweatherSans = 'MerriweatherSans';
+
   // Default fonts for each script type
   /// Default font family for Khmer script (Siemreap).
   /// This is the recommended font for general Khmer text rendering.
@@ -105,6 +181,22 @@ class FontRegistry {
   /// Default font family for Latin script (Roboto).
   /// This is the recommended font for general Latin text rendering.
   static const String _defaultLatinFont = latinRoboto;
+
+  /// Default font family for Thai script (Sarabun).
+  /// This is the recommended font for general Thai text rendering.
+  static const String _defaultThaiFont = thaiSarabun;
+
+  /// Default font family for Lao script (Phetsarath).
+  /// This is the recommended font for general Lao text rendering.
+  static const String _defaultLaoFont = laoPhetsarath;
+
+  /// Default font family for Myanmar script (Padauk).
+  /// This is the recommended font for general Myanmar text rendering.
+  static const String _defaultMyanmarFont = myanmarPadauk;
+
+  /// Default font family for Vietnamese text (BeVietnamPro).
+  /// This is the recommended font for general Vietnamese text rendering.
+  static const String _defaultVietnameseFont = vietnameseBeVietnamPro;
 
   /// Returns the default font family for a given script type.
   ///
@@ -122,6 +214,14 @@ class FontRegistry {
         return _defaultKhmerFont;
       case ScriptType.latin:
         return _defaultLatinFont;
+      case ScriptType.thai:
+        return _defaultThaiFont;
+      case ScriptType.lao:
+        return _defaultLaoFont;
+      case ScriptType.myanmar:
+        return _defaultMyanmarFont;
+      case ScriptType.vietnamese:
+        return _defaultVietnameseFont;
       case ScriptType.neutral:
         return _defaultLatinFont;
     }
@@ -146,6 +246,14 @@ class FontRegistry {
         return [khmerBattambang, khmerNotoSerifKhmer, khmerSuwannaphum];
       case ScriptType.latin:
         return [latinRoboto, latinOpenSans, latinLato];
+      case ScriptType.thai:
+        return [thaiPrompt, thaiNotoSansThai, thaiKanit];
+      case ScriptType.lao:
+        return [laoNotoSansLao, laoNotoSerifLao, laoNotoSansLaoLooped];
+      case ScriptType.myanmar:
+        return [myanmarNotoSansMyanmar, myanmarNotoSerifMyanmar];
+      case ScriptType.vietnamese:
+        return [vietnameseBeVietnamPro, latinRoboto, latinOpenSans];
       case ScriptType.neutral:
         return [latinRoboto, latinOpenSans, khmerSiemreap];
     }

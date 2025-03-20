@@ -1,6 +1,6 @@
 name: flutter_script_renderer
-description: A Flutter package for automatic rendering of multilingual text with proper script-specific styling, supporting Khmer and Latin scripts with extensibility for additional languages.
-version: 0.1.4
+description: A Flutter package for automatic rendering of multilingual text with proper script-specific styling, supporting Southeast Asian scripts including Khmer, Thai, Lao, Myanmar, Vietnamese, and Latin, with intelligent script detection and optimized typography.
+version: 0.1.5
 repository: https://github.com/sovanken/flutter-script-renderer
 homepage: https://github.com/sovanken/flutter-script-renderer
 issue_tracker: https://github.com/sovanken/flutter-script-renderer/issues
@@ -63,6 +63,142 @@ flutter:
         - asset: assets/fonts/km/Suwannaphum-Regular.ttf
         - asset: assets/fonts/km/Suwannaphum-Thin.ttf
 
+    # Lao Fonts
+    - family: NotoSansLao
+      fonts:
+        - asset: assets/fonts/lo/NotoSansLao-VariableFont_wdth,wght.ttf
+
+    - family: NotoSansLaoLooped
+      fonts:
+        - asset: assets/fonts/lo/NotoSansLaoLooped-VariableFont_wdth,wght.ttf
+
+    - family: NotoSerifLao
+      fonts:
+        - asset: assets/fonts/lo/NotoSerifLao-VariableFont_wdth,wght.ttf
+
+    - family: Phetsarath
+      fonts:
+        - asset: assets/fonts/lo/Phetsarath-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/lo/Phetsarath-Regular.ttf
+          weight: 400
+          
+    # Myanmar Fonts
+    - family: NotoSansMyanmar
+      fonts:
+        - asset: assets/fonts/my/NotoSansMyanmar-Black.ttf
+          weight: 900
+        - asset: assets/fonts/my/NotoSansMyanmar-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/my/NotoSansMyanmar-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/my/NotoSansMyanmar-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/my/NotoSansMyanmar-Light.ttf
+          weight: 300
+        - asset: assets/fonts/my/NotoSansMyanmar-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/my/NotoSansMyanmar-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/my/NotoSansMyanmar-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/my/NotoSansMyanmar-Thin.ttf
+          weight: 100
+
+    - family: NotoSerifMyanmar
+      fonts:
+        - asset: assets/fonts/my/NotoSerifMyanmar-Black.ttf
+          weight: 900
+        - asset: assets/fonts/my/NotoSerifMyanmar-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/my/NotoSerifMyanmar-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/my/NotoSerifMyanmar-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/my/NotoSerifMyanmar-Light.ttf
+          weight: 300
+        - asset: assets/fonts/my/NotoSerifMyanmar-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/my/NotoSerifMyanmar-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/my/NotoSerifMyanmar-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/my/NotoSerifMyanmar-Thin.ttf
+          weight: 100
+
+    - family: Padauk
+      fonts:
+        - asset: assets/fonts/my/Padauk-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/my/Padauk-Regular.ttf
+          weight: 400
+          
+    # Vietnamese Fonts
+    - family: BeVietnamPro
+      fonts:
+        - asset: assets/fonts/vi/BeVietnamPro-Black.ttf
+          weight: 900
+        - asset: assets/fonts/vi/BeVietnamPro-BlackItalic.ttf
+          weight: 900
+          style: italic
+        - asset: assets/fonts/vi/BeVietnamPro-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/vi/BeVietnamPro-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/vi/BeVietnamPro-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/vi/BeVietnamPro-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: assets/fonts/vi/BeVietnamPro-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/vi/BeVietnamPro-ExtraLightItalic.ttf
+          weight: 200
+          style: italic
+        - asset: assets/fonts/vi/BeVietnamPro-Italic.ttf
+          style: italic
+        - asset: assets/fonts/vi/BeVietnamPro-Light.ttf
+          weight: 300
+        - asset: assets/fonts/vi/BeVietnamPro-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/vi/BeVietnamPro-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/vi/BeVietnamPro-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/vi/BeVietnamPro-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/vi/BeVietnamPro-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/vi/BeVietnamPro-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/vi/BeVietnamPro-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/vi/BeVietnamPro-ThinItalic.ttf
+          weight: 100
+          style: italic
+          
+    - family: Lora
+      fonts:
+        - asset: assets/fonts/vi/Lora-VariableFont_wght.ttf
+        - asset: assets/fonts/vi/Lora-Italic-VariableFont_wght.ttf
+          style: italic
+          
+    - family: Merriweather
+      fonts:
+        - asset: assets/fonts/vi/Merriweather-VariableFont_opsz,wdth,wght.ttf
+        - asset: assets/fonts/vi/Merriweather-Italic-VariableFont_opsz,wdth,wght.ttf
+          style: italic
+          
+    - family: MerriweatherSans
+      fonts:
+        - asset: assets/fonts/vi/MerriweatherSans-VariableFont_wght.ttf
+        - asset: assets/fonts/vi/MerriweatherSans-Italic-VariableFont_wght.ttf
+          style: italic
+
     # English Fonts
     - family: IBMPlexSans
       fonts:
@@ -114,3 +250,233 @@ flutter:
         - asset: assets/fonts/en/SFNSDisplay-Regular.otf
         - asset: assets/fonts/en/SFNSDisplay-Semibold.otf
         - asset: assets/fonts/en/SFNSDisplay-Thin.otf
+        
+    # Thai Fonts
+    - family: ChakraPetch
+      fonts:
+        - asset: assets/fonts/th/ChakraPetch-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/th/ChakraPetch-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/th/ChakraPetch-Italic.ttf
+          style: italic
+        - asset: assets/fonts/th/ChakraPetch-Light.ttf
+          weight: 300
+        - asset: assets/fonts/th/ChakraPetch-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/th/ChakraPetch-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/th/ChakraPetch-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/th/ChakraPetch-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/th/ChakraPetch-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/th/ChakraPetch-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+          
+    - family: Kanit
+      fonts:
+        - asset: assets/fonts/th/Kanit-Black.ttf
+          weight: 900
+        - asset: assets/fonts/th/Kanit-BlackItalic.ttf
+          weight: 900
+          style: italic
+        - asset: assets/fonts/th/Kanit-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/th/Kanit-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/th/Kanit-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/th/Kanit-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: assets/fonts/th/Kanit-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/th/Kanit-ExtraLightItalic.ttf
+          weight: 200
+          style: italic
+        - asset: assets/fonts/th/Kanit-Italic.ttf
+          style: italic
+        - asset: assets/fonts/th/Kanit-Light.ttf
+          weight: 300
+        - asset: assets/fonts/th/Kanit-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/th/Kanit-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/th/Kanit-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/th/Kanit-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/th/Kanit-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/th/Kanit-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/th/Kanit-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/th/Kanit-ThinItalic.ttf
+          weight: 100
+          style: italic
+          
+    - family: Mitr
+      fonts:
+        - asset: assets/fonts/th/Mitr-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/th/Mitr-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/th/Mitr-Light.ttf
+          weight: 300
+        - asset: assets/fonts/th/Mitr-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/th/Mitr-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/th/Mitr-SemiBold.ttf
+          weight: 600
+          
+    - family: NotoSansThai
+      fonts:
+        - asset: assets/fonts/th/NotoSansThai-VariableFont_wdth,wght.ttf
+          
+    - family: Prompt
+      fonts:
+        - asset: assets/fonts/th/Prompt-Black.ttf
+          weight: 900
+        - asset: assets/fonts/th/Prompt-BlackItalic.ttf
+          weight: 900
+          style: italic
+        - asset: assets/fonts/th/Prompt-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/th/Prompt-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/th/Prompt-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/th/Prompt-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: assets/fonts/th/Prompt-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/th/Prompt-ExtraLightItalic.ttf
+          weight: 200
+          style: italic
+        - asset: assets/fonts/th/Prompt-Italic.ttf
+          style: italic
+        - asset: assets/fonts/th/Prompt-Light.ttf
+          weight: 300
+        - asset: assets/fonts/th/Prompt-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/th/Prompt-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/th/Prompt-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/th/Prompt-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/th/Prompt-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/th/Prompt-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/th/Prompt-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/th/Prompt-ThinItalic.ttf
+          weight: 100
+          style: italic
+          
+    - family: Sarabun
+      fonts:
+        - asset: assets/fonts/th/Sarabun-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/th/Sarabun-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/th/Sarabun-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/th/Sarabun-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: assets/fonts/th/Sarabun-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/th/Sarabun-ExtraLightItalic.ttf
+          weight: 200
+          style: italic
+        - asset: assets/fonts/th/Sarabun-Italic.ttf
+          style: italic
+        - asset: assets/fonts/th/Sarabun-Light.ttf
+          weight: 300
+        - asset: assets/fonts/th/Sarabun-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/th/Sarabun-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/th/Sarabun-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/th/Sarabun-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/th/Sarabun-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/th/Sarabun-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/th/Sarabun-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/th/Sarabun-ThinItalic.ttf
+          weight: 100
+          style: italic
+          
+    - family: Taviraj
+      fonts:
+        - asset: assets/fonts/th/Taviraj-Black.ttf
+          weight: 900
+        - asset: assets/fonts/th/Taviraj-BlackItalic.ttf
+          weight: 900
+          style: italic
+        - asset: assets/fonts/th/Taviraj-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/th/Taviraj-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/th/Taviraj-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/th/Taviraj-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: assets/fonts/th/Taviraj-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/th/Taviraj-ExtraLightItalic.ttf
+          weight: 200
+          style: italic
+        - asset: assets/fonts/th/Taviraj-Italic.ttf
+          style: italic
+        - asset: assets/fonts/th/Taviraj-Light.ttf
+          weight: 300
+        - asset: assets/fonts/th/Taviraj-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/th/Taviraj-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/th/Taviraj-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/th/Taviraj-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/th/Taviraj-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/th/Taviraj-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/th/Taviraj-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/th/Taviraj-ThinItalic.ttf
+          weight: 100
+          style: italic
