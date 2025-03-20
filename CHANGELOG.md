@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.7 
+
+### Added
+
+* Support for custom font integration with all Southeast Asian scripts
+* Documentation for using app-specific fonts alongside package fonts
+
+### Improved
+
+* Enhanced script detection accuracy and performance
+* Optimized text rendering for complex multilingual content
+
 ## 0.1.6 
 
 ### Code Quality & Maintenance

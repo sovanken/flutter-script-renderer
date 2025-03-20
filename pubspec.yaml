@@ -1,6 +1,6 @@
 name: flutter_script_renderer
 description: A Flutter package for rendering multilingual text with proper styling for Southeast Asian scripts (Khmer, Thai, Lao, Myanmar, Vietnamese, and Latin).
-version: 0.1.6
+version: 0.1.7
 repository: https://github.com/sovanken/flutter-script-renderer
 homepage: https://github.com/sovanken/flutter-script-renderer
 issue_tracker: https://github.com/sovanken/flutter-script-renderer/issues

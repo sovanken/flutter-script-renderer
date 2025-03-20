@@ -27,7 +27,7 @@ Add this package to your pubspec.yaml:
 
 ```yaml
 dependencies:
-  flutter_script_renderer: ^0.1.6
+  flutter_script_renderer: ^0.1.7
 ```
 
 Then run the following command:
@@ -139,6 +139,39 @@ FontRegistry.latinInter
 FontRegistry.latinLato
 // ... and more
 ```
+
+### Using Custom Fonts
+
+While the package provides built-in fonts for each script, you can also use your own custom fonts:
+
+```dart
+LocalizedRichText(
+  text: 'English text និងអក្សរខ្មែរ และข้อความไทย',
+  fontSize: 16,
+  khmerFontFamily: 'khmer_os_Battambang',  // Your custom font name
+  thaiFontFamily: 'Sukhumvit',             // Your custom font name
+)
+```
+
+To use custom fonts:
+
+1. Declare them in your app's `pubspec.yaml`:
+   ```yaml
+   flutter:
+     fonts:
+       - family: khmer_os_Battambang
+         fonts:
+           - asset: fonts/khmer_os_Battambang.ttf
+       - family: Sukhumvit
+         fonts:
+           - asset: fonts/Sukhumvit.ttf
+   ```
+
+2. Make sure the fonts properly support the target scripts with appropriate glyphs
+
+3. Pass the font family name as a string to the corresponding script's font family parameter
+
+Using custom fonts gives you flexibility while still benefiting from the package's automatic script detection and styling capabilities.
 
 ## Technical Requirements
 
