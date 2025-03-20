@@ -1,5 +1,17 @@
 # Changelog
 
+# Changelog
+
+## 0.1.4 - March 22, 2025
+
+### Example Additions
+* Added comprehensive example application with multilingual demonstrations
+* Created well-structured example project with proper organization
+* Included demonstrations for all key package features
+* Added grammatically correct Khmer text examples
+* Provided real-world mixed script scenarios
+* Created example documentation and implementation guides
+
 ## 0.1.3 - March 21, 2025
 
 ### Enhancements
