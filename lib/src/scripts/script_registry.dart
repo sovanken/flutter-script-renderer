@@ -78,19 +78,19 @@ class ScriptRegistry {
     /// Optional Latin-specific style properties.
     /// These override corresponding base properties when the script type is Latin.
     ScriptStyleProperties? latinProperties,
-    
+
     /// Optional Thai-specific style properties.
     /// These override corresponding base properties when the script type is Thai.
     ScriptStyleProperties? thaiProperties,
-    
+
     /// Optional Lao-specific style properties.
     /// These override corresponding base properties when the script type is Lao.
     ScriptStyleProperties? laoProperties,
-    
+
     /// Optional Myanmar-specific style properties.
     /// These override corresponding base properties when the script type is Myanmar.
     ScriptStyleProperties? myanmarProperties,
-    
+
     /// Optional Vietnamese-specific style properties.
     /// These override corresponding base properties when the script type is Vietnamese.
     ScriptStyleProperties? vietnameseProperties,

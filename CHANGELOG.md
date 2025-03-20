@@ -1,6 +1,23 @@
 # Changelog
 
-## 0.1.5
+## 0.1.6 
+
+### Code Quality & Maintenance
+* Fixed Dart formatting issues across the codebase
+* Applied standard Dart formatting to all source files
+* Resolved formatting inconsistencies in script handler classes
+* Improved code readability with consistent indentation and line breaks
+* Ensured all files comply with Dart formatter guidelines
+* Addressed static analysis warnings related to formatting
+
+### Technical Improvements
+* Optimized import statements ordering
+* Fixed parameter alignment in function definitions
+* Standardized documentation comment formatting
+* Removed unnecessary whitespace and improved code layout
+* Enhanced code maintainability through consistent styling
+
+## 0.1.5 
 
 ### Major Enhancements
 * Added support for multiple Southeast Asian scripts:
@@ -29,7 +46,7 @@
 * Enhanced font fallback chains for better cross-script compatibility
 * Improved performance when handling complex multilingual text
 
-## 0.1.4
+## 0.1.4 
 
 ### Example Additions
 * Added comprehensive example application with multilingual demonstrations
@@ -39,7 +56,7 @@
 * Provided real-world mixed script scenarios
 * Created example documentation and implementation guides
 
-## 0.1.3
+## 0.1.3 
 
 ### Enhancements
 * Reorganized font assets to follow Flutter package best practices
@@ -53,7 +70,7 @@
 * Reduced package size through improved asset organization
 * Simplified implementation for package consumers
 
-## 0.1.2
+## 0.1.2 
 
 ### Fixes
 * Resolved font family application issues in package context
@@ -65,13 +82,14 @@
 * Enhanced font fallback system for better cross-platform compatibility
 * Optimized font loading mechanism for package-provided fonts
 
-## 0.1.1
+## 0.1.1 
+
 ### Improvements
 * Enhanced font handling and asset management
 * Improved documentation for font usage
 * Fixed issues with font family application
 
-## 0.1.0
+## 0.1.0 
 
 ### Features
 * Initial release of Flutter Script Renderer

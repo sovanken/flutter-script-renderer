@@ -56,7 +56,8 @@ class ThaiStyle {
       return baseStyle.copyWith(
         fontFamily: FontRegistry.getDefaultFontFamily(ScriptType.thai),
         fontFamilyFallback: FontRegistry.getFontFallbacks(ScriptType.thai),
-        package: 'flutter_script_renderer', // Required for package font reference
+        package:
+            'flutter_script_renderer', // Required for package font reference
       );
     }
 
@@ -65,10 +66,12 @@ class ThaiStyle {
     return TextStyle(
       fontSize: thaiProperties.fontSize ?? baseProperties.fontSize,
       color: thaiProperties.color ?? baseProperties.color,
-      backgroundColor: thaiProperties.backgroundColor ?? baseProperties.backgroundColor,
+      backgroundColor:
+          thaiProperties.backgroundColor ?? baseProperties.backgroundColor,
       fontWeight: thaiProperties.fontWeight ?? baseProperties.fontWeight,
       fontStyle: thaiProperties.fontStyle ?? baseProperties.fontStyle,
-      letterSpacing: thaiProperties.letterSpacing ?? baseProperties.letterSpacing,
+      letterSpacing:
+          thaiProperties.letterSpacing ?? baseProperties.letterSpacing,
       wordSpacing: thaiProperties.wordSpacing ?? baseProperties.wordSpacing,
       textBaseline: thaiProperties.textBaseline ?? baseProperties.textBaseline,
       height: thaiProperties.height ?? baseProperties.height,
@@ -79,10 +82,13 @@ class ThaiStyle {
       background: thaiProperties.background ?? baseProperties.background,
       shadows: thaiProperties.shadows ?? baseProperties.shadows,
       fontFeatures: thaiProperties.fontFeatures ?? baseProperties.fontFeatures,
-      fontVariations: thaiProperties.fontVariations ?? baseProperties.fontVariations,
+      fontVariations:
+          thaiProperties.fontVariations ?? baseProperties.fontVariations,
       decoration: thaiProperties.decoration ?? baseProperties.decoration,
-      decorationColor: thaiProperties.decorationColor ?? baseProperties.decorationColor,
-      decorationStyle: thaiProperties.decorationStyle ?? baseProperties.decorationStyle,
+      decorationColor:
+          thaiProperties.decorationColor ?? baseProperties.decorationColor,
+      decorationStyle:
+          thaiProperties.decorationStyle ?? baseProperties.decorationStyle,
       decorationThickness: thaiProperties.decorationThickness ??
           baseProperties.decorationThickness,
       fontFamily: thaiProperties.fontFamily ??

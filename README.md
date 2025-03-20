@@ -27,7 +27,7 @@ Add this package to your pubspec.yaml:
 
 ```yaml
 dependencies:
-  flutter_script_renderer: ^0.1.5
+  flutter_script_renderer: ^0.1.6
 ```
 
 Then run the following command:
